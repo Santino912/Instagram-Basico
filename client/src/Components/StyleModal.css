@@ -1,0 +1,62 @@
+.boxModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    position: fixed;
+    z-index: 6;
+}
+
+.show{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 100vw;
+    height:  100vh;
+    z-index: 7;
+}
+  
+  .modal{
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    background-color: var(--ig-primary-color);
+    width: 80%;
+    height: 80%;
+    z-index: 7;
+  }
+  .divImgModal{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 60%;
+    height: 100%;
+    background-color: black;
+  }
+  .imgModal{
+    width: 100%;
+    height: auto;
+  }
+  .ownerComentDiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid gray;
+  }
+  .divComentsModal{
+    height: 100%;
+    width: 40%;
+  }
+  .divComents{
+    width: 100%;
+    height: auto;
+    overflow-y:visible
+
+  }
