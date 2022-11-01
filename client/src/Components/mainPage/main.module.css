@@ -1,0 +1,16 @@
+.showBar {
+  width: 15%;
+  height: 65px;
+  position: fixed;
+  z-index: 2;
+  top: 95px;
+  background-color: var(--ig-primary-color);
+}
+.showAddBar {
+  position: fixed;
+  top: 70px;
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  background-color: var(--ig-primary-color);
+}

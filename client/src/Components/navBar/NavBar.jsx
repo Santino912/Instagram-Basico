@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./StyleNavBar.css";
+import style from "./navBar.module.css";
 
 export default function NavBar() {
   const [searchText, setSearchText] = useState("");
@@ -20,19 +20,19 @@ export default function NavBar() {
   };
 
   return (
-    <div className="navBar">
-      <div className="iconsNavBar">
-        <div className="logoDivBar">
-          <div className="divLogo">
+    <div className={style.navBar}>
+      <div className={style.iconsNavBar}>
+        <div className={style.logoDivBar}>
+          <div className={style.divLogo}>
             <i
-              className="logo"
+              className={style.logo}
               data-visualcompletion="css-img"
               aria-label="Instagram"
               role="img"
             ></i>
           </div>
         </div>
-        <div className="search">
+        <div className={style.search}>
           <div
             style={{
               display: "flex",
@@ -42,7 +42,7 @@ export default function NavBar() {
               height: "100%",
             }}
           >
-            <span className="inputVisual">
+            <span className={style.inputVisual}>
               {searchText.length < 1 && inputIcons ? (
                 <>
                   <svg
@@ -83,7 +83,7 @@ export default function NavBar() {
 
             <input
               style={{ opacity: 0.5, zIndex: 4 }}
-              className="inputSearch"
+              className={style.inputSearch}
               type="text"
               onFocus={handleInput}
               onBlur={handleInput}
@@ -93,9 +93,9 @@ export default function NavBar() {
             />
           </div>
         </div>
-        <div className="options">
-          <div className="divOptions">
-            <div className="home">
+        <div className={style.options}>
+          <div className={style.divOptions}>
+            <div className={style.home}>
               <svg
                 aria-label="Inicio"
                 color="#262626"
@@ -109,7 +109,7 @@ export default function NavBar() {
               </svg>
             </div>
 
-            <div className="msgs">
+            <div className={style.msgs}>
               <svg
                 aria-label="Compartir publicación"
                 height="24"
@@ -137,7 +137,7 @@ export default function NavBar() {
               </svg>
             </div>
 
-            <div className="publicIcon">
+            <div className={style.publicIcon}>
               <svg
                 aria-label="Nueva publicación"
                 color="#262626"
@@ -180,7 +180,7 @@ export default function NavBar() {
               </svg>
             </div>
 
-            <div className="explore">
+            <div className={style.explore}>
               <svg
                 aria-label="Buscar personas"
                 color="#262626"
@@ -215,7 +215,7 @@ export default function NavBar() {
               </svg>
             </div>
 
-            <div className="activity">
+            <div className={style.activity}>
               <svg
                 aria-label="Feed de actividad"
                 color="#262626"
@@ -229,7 +229,7 @@ export default function NavBar() {
               </svg>
             </div>
 
-            <div className="profile">
+            <div className={style.profile}>
               <div
                 style={{
                   width: "30px",

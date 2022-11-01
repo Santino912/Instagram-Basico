@@ -1,8 +1,8 @@
 import moment from "moment";
 import React, { useState } from "react";
 import Photo from "../photo/Photo";
-import SelectsNav from "../navBar/SelectsNav";
-import "../StyledCom.css";
+import SelectsNav from "./SelectsNav";
+import style from "./styledPost.module.css";
 import "moment/locale/es";
 
 export default function Post({
@@ -46,8 +46,8 @@ export default function Post({
   };
 
   return (
-    <div className="post">
-      <div className="postChildren">
+    <div className={style.post}>
+      <div className={style.postChildren}>
         <Photo image={image} name={name} />
         <SelectsNav
           handleLike={handleLike}
@@ -57,23 +57,26 @@ export default function Post({
           handleSave={handleSave}
           handleModal={handleModal}
         />
-        <div className="divLikesCount">
+        <div className={style.divLikesCount}>
           <h5 style={{ margin: "0 13px" }}>{`${numberLikes} Me gusta `}</h5>
         </div>
         <div style={{ width: "100%" }}>
           <button
-            className="mostrar"
+            className={style.mostrar}
             type="button"
             onClick={() => handleShow(name, image, id)}
           >{`Ver los ${coments.length} comentarios mas`}</button>
         </div>
-        <div className="timePost">
+        <div className={style.timePost}>
           <h5 style={{ margin: "10px 13px" }}>{moment(time).fromNow()}</h5>
         </div>
-        <div className="public">
-          <div className="inputComentsText" style={{ width: "15%" }}></div>
+        <div className={style.public}>
+          <div
+            className={style.inputComentsText}
+            style={{ width: "15%" }}
+          ></div>
           <input
-            className="inputComentsText"
+            className={style.inputComentsText}
             style={{ width: "65%" }}
             type="text"
             placeholder="Agregar un coment..."
@@ -82,7 +85,7 @@ export default function Post({
           />
           {coment.length < 1 ? (
             <input
-              className="inputComentsSubmit"
+              className={style.inputComentsSubmit}
               style={{ width: "20%", opacity: 0.5, cursor: "auto" }}
               type="button"
               value="Publicar"
@@ -90,7 +93,7 @@ export default function Post({
             />
           ) : (
             <input
-              className="inputComentsSubmit"
+              className={style.inputComentsSubmit}
               style={{ width: "20%" }}
               type="button"
               value="Publicar"

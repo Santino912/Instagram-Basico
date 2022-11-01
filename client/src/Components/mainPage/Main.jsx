@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Post from "../post/Post";
 import { ModalComents } from "../modal/Modal";
 import NavBar from "../navBar/NavBar";
+import style from "./main.module.css";
 
 const Main = () => {
   const [posts, setPosts] = useState([
@@ -80,12 +81,12 @@ const Main = () => {
       )}
       <input
         type="button"
-        className="showAddBar"
+        className={style.showAddBar}
         value="+"
         onClick={() => setShow(!show)}
       />
       {show ? (
-        <div className="showBar">
+        <div className={style.showBar}>
           <input
             type="text"
             placeholder="Name here"
@@ -103,22 +104,23 @@ const Main = () => {
           <input type="button" onClick={handleSubmit} value="Enviar" />
         </div>
       ) : null}
-
-      {posts.map((el, key) => (
-        <Post
-          key={key}
-          image={el.image}
-          name={el.name}
-          handleShow={handleShow}
-          save={el.save}
-          time={el.time}
-          coments={coments}
-          setComents={setComents}
-          id={el.id}
-          setSearchId={setSearchId}
-          handleModal={handleModal}
-        />
-      ))}
+      <div>
+        {posts.map((el, key) => (
+          <Post
+            key={key}
+            image={el.image}
+            name={el.name}
+            handleShow={handleShow}
+            save={el.save}
+            time={el.time}
+            coments={coments}
+            setComents={setComents}
+            id={el.id}
+            setSearchId={setSearchId}
+            handleModal={handleModal}
+          />
+        ))}
+      </div>
     </div>
   );
 };
