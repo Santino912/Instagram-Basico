@@ -14,3 +14,11 @@
   height: 25px;
   background-color: var(--ig-primary-color);
 }
+
+.postDiv {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}

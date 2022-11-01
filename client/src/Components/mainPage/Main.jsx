@@ -104,7 +104,7 @@ const Main = () => {
           <input type="button" onClick={handleSubmit} value="Enviar" />
         </div>
       ) : null}
-      <div>
+      <div className={style.postDiv}>
         {posts.map((el, key) => (
           <Post
             key={key}

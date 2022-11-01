@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from "./Logo";
 import style from "./navBar.module.css";
 
 export default function NavBar() {
@@ -24,12 +25,7 @@ export default function NavBar() {
       <div className={style.iconsNavBar}>
         <div className={style.logoDivBar}>
           <div className={style.divLogo}>
-            <i
-              className={style.logo}
-              data-visualcompletion="css-img"
-              aria-label="Instagram"
-              role="img"
-            ></i>
+            <Logo />
           </div>
         </div>
         <div className={style.search}>
