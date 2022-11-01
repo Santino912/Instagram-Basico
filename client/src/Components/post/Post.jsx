@@ -1,6 +1,6 @@
 import moment from "moment";
 import React, { useState } from "react";
-import Foto from "../photo/Foto";
+import Photo from "../photo/Photo";
 import SelectsNav from "../navBar/SelectsNav";
 import "../StyledCom.css";
 import "moment/locale/es";
@@ -48,7 +48,7 @@ export default function Post({
   return (
     <div className="post">
       <div className="postChildren">
-        <Foto image={image} name={name} />
+        <Photo image={image} name={name} />
         <SelectsNav
           handleLike={handleLike}
           likeStatus={likeStatus}
